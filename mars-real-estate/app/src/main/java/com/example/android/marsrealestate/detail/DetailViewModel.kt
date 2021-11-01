@@ -2,8 +2,8 @@ package com.example.android.marsrealestate.detail
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.example.android.marsrealestate.detail.DetailFragment
 import com.example.android.marsrealestate.network.MarsProperty
+import com.example.android.marsrealestate.R
 
 /**
  *  The [ViewModel] associated with the [DetailFragment], containing information about the selected
@@ -23,7 +23,7 @@ class DetailViewModel(marsProperty: MarsProperty, app: Application) : AndroidVie
 
     // The displayPropertyPrice formatted Transformation Map LiveData, which displays the sale
     // or rental price.
-    /*val displayPropertyPrice = Transformations.map(selectedProperty) {
+    val displayPropertyPrice = Transformations.map(selectedProperty) {
         app.applicationContext.getString(
             when (it.isRental) {
                 true -> R.string.display_price_monthly_rental
@@ -40,5 +40,5 @@ class DetailViewModel(marsProperty: MarsProperty, app: Application) : AndroidVie
                     true -> R.string.type_rent
                     false -> R.string.type_sale
                 }))
-    }*/
+    }
 }
